@@ -1,0 +1,105 @@
+[
+  {
+      "id": "1",
+      "name": "DevOps",
+      "hourlyRate": {
+          "amount": 0,
+          "currency": "USD"
+      },
+      "memberships": [
+          {
+              "userId": "fdsasdf",
+              "hourlyRate": null,
+              "targetId": "afdsadf",
+              "membershipType": "WORKSPACE",
+              "membershipStatus": "ACTIVE"
+          },
+          {
+              "userId": "dsafasfsa",
+              "hourlyRate": null,
+              "targetId": "asdfsdf",
+              "membershipType": "WORKSPACE",
+              "membershipStatus": "ACTIVE"
+          }
+      ],
+      "workspaceSettings": {
+          "timeRoundingInReports": false,
+          "onlyAdminsSeeBillableRates": true,
+          "onlyAdminsCreateProject": true,
+          "onlyAdminsSeeDashboard": false,
+          "defaultBillableProjects": true,
+          "lockTimeEntries": null,
+          "round": {
+              "round": "Round to nearest",
+              "minutes": "15"
+          },
+          "projectFavorites": true,
+          "canSeeTimeSheet": false,
+          "canSeeTracker": true,
+          "projectPickerSpecialFilter": false,
+          "forceProjects": false,
+          "forceTasks": false,
+          "forceTags": false,
+          "forceDescription": false,
+          "onlyAdminsSeeAllTimeEntries": false,
+          "onlyAdminsSeePublicProjectsEntries": false,
+          "trackTimeDownToSecond": true,
+          "projectGroupingLabel": "client",
+          "adminOnlyPages": [],
+          "automaticLock": null,
+          "onlyAdminsCreateTag": false,
+          "onlyAdminsCreateTask": false,
+          "isProjectPublicByDefault": true
+      },
+      "imageUrl": "https://img.clockify.me/2020-04-25T10%3A47%3A25.803ZTSH-logo_color-3.png",
+      "featureSubscriptionType": null
+  },
+  {
+      "id": "2",
+      "name": "Kruc",
+      "hourlyRate": {
+          "amount": 0,
+          "currency": "USD"
+      },
+      "memberships": [
+          {
+              "userId": "sdsgsdfg",
+              "hourlyRate": null,
+              "targetId": "sfgsdfg",
+              "membershipType": "WORKSPACE",
+              "membershipStatus": "ACTIVE"
+          }
+      ],
+      "workspaceSettings": {
+          "timeRoundingInReports": false,
+          "onlyAdminsSeeBillableRates": true,
+          "onlyAdminsCreateProject": true,
+          "onlyAdminsSeeDashboard": false,
+          "defaultBillableProjects": true,
+          "lockTimeEntries": null,
+          "round": {
+              "round": "Round to nearest",
+              "minutes": "15"
+          },
+          "projectFavorites": true,
+          "canSeeTimeSheet": false,
+          "canSeeTracker": true,
+          "projectPickerSpecialFilter": false,
+          "forceProjects": false,
+          "forceTasks": false,
+          "forceTags": false,
+          "forceDescription": false,
+          "onlyAdminsSeeAllTimeEntries": false,
+          "onlyAdminsSeePublicProjectsEntries": false,
+          "trackTimeDownToSecond": true,
+          "projectGroupingLabel": "client",
+          "adminOnlyPages": [],
+          "automaticLock": null,
+          "onlyAdminsCreateTag": false,
+          "onlyAdminsCreateTask": false,
+          "isProjectPublicByDefault": true
+      },
+      "imageUrl": "",
+      "featureSubscriptionType": null
+  }
+]
