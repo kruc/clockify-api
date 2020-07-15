@@ -1,6 +1,8 @@
 package gcclient
 
 import (
+	"strings"
+
 	"github.com/kruc/clockify-api/gchttp"
 )
 
@@ -20,3 +22,20 @@ type Client struct {
 
 // Clients list of Client
 type Clients []Client
+
+// ToMap converts []Client to map[string]Project
+func (c *Clients) ToMap() map[string][]Client {
+	projectMap := make(map[string][]Client, len(*c))
+
+	for _, client := range *c {
+		normalizedClientName := Normalize(client.Name)
+		projectMap[normalizedClientName] = append(projectMap[normalizedClientName], client)
+	}
+
+	return projectMap
+}
+
+// Normalize modify map key to lower case
+func Normalize(word string) string {
+	return strings.ToLower(word)
+}

@@ -35,6 +35,7 @@ func NewClient(key string, options ...gchttp.ClientOptionFunc) (*ClockifyClient,
 		UserClient:         gcuser.NewClient(c),
 		TagClient:          gctag.NewClient(c),
 		WorkspaceClient:    gcworkspace.NewClient(c),
+		ClientClient:       gcclient.NewClient(c),
 	}
 	// Run the options on it
 	for _, option := range options {

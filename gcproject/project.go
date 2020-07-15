@@ -1,6 +1,9 @@
 package gcproject
 
 import (
+	"encoding/json"
+	"fmt"
+
 	"github.com/kruc/clockify-api/gchttp"
 )
 
@@ -13,4 +16,22 @@ func NewClient(cc *gchttp.ClockifyHTTPClient) *ProjectClient {
 	}
 	pc.endpoint = cc.URL
 	return pc
+}
+
+// FindProjectsOnWorkspace get projects from specific workspace
+func (pc *ProjectClient) FindProjectsOnWorkspace(workspaceID string) (Projects, error) {
+
+	body, err := pc.cc.GetRequest(fmt.Sprintf("%s/workspaces/%s/projects", pc.endpoint, workspaceID))
+
+	var projects Projects
+
+	if err != nil {
+		return projects, err
+	}
+	if body == nil {
+		return nil, nil
+	}
+	err = json.Unmarshal(*body, &projects)
+
+	return projects, err
 }

@@ -1,6 +1,8 @@
 package gcproject
 
 import (
+	"strings"
+
 	"github.com/kruc/clockify-api/gchttp"
 )
 
@@ -52,3 +54,20 @@ type Membership struct {
 
 // Projects list of projects
 type Projects []Project
+
+// ToMap converts []Project to map[string]Project
+func (p *Projects) ToMap() map[string][]Project {
+	projectMap := make(map[string][]Project, len(*p))
+
+	for _, project := range *p {
+		normalizedProjectName := Normalize(project.Name)
+		projectMap[normalizedProjectName] = append(projectMap[normalizedProjectName], project)
+	}
+
+	return projectMap
+}
+
+// Normalize modify map key to lower case
+func Normalize(word string) string {
+	return strings.ToLower(word)
+}

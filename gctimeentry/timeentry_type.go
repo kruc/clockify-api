@@ -1,6 +1,7 @@
 package gctimeentry
 
 import (
+	"strings"
 	"time"
 
 	"github.com/kruc/clockify-api/gchttp"
@@ -76,4 +77,15 @@ func (te *TimeEntry) RemoveTag(tagID string) []string {
 	}
 
 	return te.TagIds
+}
+
+// ToMap returns time entries as client/project structured map
+func (tes *TimeEntries) ToMap() map[string][]TimeEntry {
+	var structuredMap = make(map[string][]TimeEntry)
+	for _, te := range *tes {
+		loweredClientName := strings.ToLower(te.Project.ClientName)
+		structuredMap[loweredClientName] = append(structuredMap[loweredClientName], te)
+	}
+
+	return structuredMap
 }
